@@ -1,64 +1,122 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>刘城希的个人网站</title>
     <style>
-        body {
-            background-color: #f1f1f1;
-            text-align: center;
-            padding: 40px;
-            font-family: "微软雅黑", sans-serif;
-            margin: 0;
-        }
-        .container {
-            max-width: 700px;
-            margin: 30px auto;
-            padding: 25px;
-            line-height: 1.8;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-        }
-        .avatar {
-            border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2); 
-            width: 100px; 
-            height: 100px; 
-            object-fit: cover; 
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        .avatar:hover {
-            width: 120px;
-            height: 120px; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
-            border-color: #eee;
-        }
-        h1 {
-            color: #333;
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-        .intro {
-            color: #555;
-            font-size: 18px;
-            margin: 10px 0;
-        }
+      body {
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 40px 20px;
+        font-family: "微软雅黑", sans-serif;
+        margin: 0;
+      }
+      .container {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 25px;
+        line-height: 1.8;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+      }
+      .avatar {
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      .avatar:hover {
+        width: 120px;
+        height: 120px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        border-color: #eee;
+      }
+      h1 {
+        color: #333;
+        font-size: 32px;
+        margin-bottom: 15px;
+      }
+      .intro {
+        color: #555;
+        font-size: 18px;
+        margin: 10px 0;
+      }
+      .photo-section {
+        margin: 50px 0;
+      }
+      .photo-title {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 25px;
+        position: relative;
+      }
+      .photo-title::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 3px;
+        background-color: #ddd;
+        margin: 10px auto 0;
+      }
+      .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        padding: 0;
+        list-style: none;
+      }
+      .photo-item {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+      .photo-item:hover {
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      .photo-img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+      }
+      .align-top {
+        object-position: top;
+      }
     </style>
-</head>
-<body>
-    <img 
-        class="avatar" 
-        src="OIP-C.jpg" 
-        alt=""
-    >
+  </head>
+  <body>
+    <img class="avatar" src="OIP-C.jpg" alt="" />
+
     <div class="container">
-        <h1>你好，我是<b>刘城希</b></h1>
-        <p class="intro">这是我的个人网站，第一次尝试制作，慢慢完善中～</p>
-        <p class="intro">后续可以添加更多内容：我的爱好、作品展示、联系方式等</p>
+      <h1>你好，我是<b>刘城希</b></h1>
+      <p class="intro">这是我的个人网站，第一次尝试制作，慢慢完善中～</p>
+      <p class="intro">后续可以添加更多内容：我的爱好、作品展示、联系方式等</p>
+      <div class="photo-section">
+        <h2 class="photo-title">我的生活照片</h2>
+        <ul class="photo-grid">
+          <li class="photo-item">
+            <img src="夜游姑苏1.jpg" alt="生活照片1" class="photo-img" />
+          </li>
+          <li class="photo-item">
+            <img src="夜游姑苏2.jpg" alt="生活照片2" class="photo-img" />
+          </li>
+          <li class="photo-item">
+            <img src="夜游姑苏3.jpg" alt="生活照片3" class="photo-img" />
+          </li>
+          <li class="photo-item">
+            <img src="消防体验.jpg" alt="生活照片4" class="photo-img align-top" />
+          </li>
+        </ul>
+      </div>
     </div>
-</body>
+  </body>
 </html>
+
