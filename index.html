@@ -1,22 +1,64 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body style="background-color: #f1f1f1; text-align: center; padding: 40px">
-    <img
-    src:""C:\Users\卢青\Desktop\OIP-C.jpg""
-    alt="刘城希" width='80px' height='80px'>
-  </body>
-  <body
-    style="max-width: 700px; margin: 30px auto; padding: 15px; line-height: 1.7;"
-  >
-    <p style="font-size: 40px;">你好，我是<b>刘城希</b>，这是我的个人网站</p>
-    <p style="font-size: 40px;">我也不知道该输点啥，反正只是做个个人网站尝试一下，啦啦啦</p>
-  </body>
-  <body style="background-color: #f1f1f1; text-align: center; padding: 40px">
-    <p>我的网站</p>
-  </body>
+    <title>刘城希的个人网站</title>
+    <style>
+        body {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 40px;
+            font-family: "微软雅黑", sans-serif;
+            margin: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 25px;
+            line-height: 1.8;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        .avatar {
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2); 
+            width: 100px; 
+            height: 100px; 
+            object-fit: cover; 
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .avatar:hover {
+            width: 120px;
+            height: 120px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+            border-color: #eee;
+        }
+        h1 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        .intro {
+            color: #555;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <img 
+        class="avatar" 
+        src="OIP-C.jpg" 
+        alt=""
+    >
+    <div class="container">
+        <h1>你好，我是<b>刘城希</b></h1>
+        <p class="intro">这是我的个人网站，第一次尝试制作，慢慢完善中～</p>
+        <p class="intro">后续可以添加更多内容：我的爱好、作品展示、联系方式等</p>
+    </div>
+</body>
 </html>
